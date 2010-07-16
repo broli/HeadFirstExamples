@@ -1,10 +1,17 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.ScrollPaneConstants;
 
 /**
  * 
@@ -14,7 +21,7 @@ import javax.swing.JPanel;
  * @author cferrabo
  *
  */
-public class WidgetTest {
+public class WidgetTest implements ActionListener {
 
 	/**
 	 * @param args
@@ -28,31 +35,71 @@ public class WidgetTest {
 	public void go() {
 		JFrame frame = new JFrame () ;
 		JPanel panel = new JPanel () ;
-		JButton button1 = new JButton ("shock me0");
-		JButton button2 = new JButton ("shock me2");
-		JButton button3 = new JButton ("shock me3");
-		JButton button4 = new JButton ("shock me4");
-		JButton button5 = new JButton ("shock me5");
-		JButton button6 = new JButton ("shock me6");
-		JButton button7 = new JButton ("shock me7");
 		
-		panel.setBackground(Color.darkGray);
+		panel.setBackground(Color.gray);
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		
-		panel.add(button1);
-		panel.add(button2);
-		panel.add(button3);
-		panel.add(button4);
-		panel.add(button5);
-		panel.add(button6);
-		panel.add(button7);
+		JTextField Text1 = new JTextField("Texto");
+		Text1.setEditable(false);
+		Text1.setSize(10, 10);
 		
+		JTextArea Textarea = new  JTextArea(10,20);
+		
+		JScrollPane scroller = new JScrollPane (Textarea) ;
+		
+		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		
+		
+		JCheckBox check = new JCheckBox("Goes to 11");
+		
+		
+		
+		panel.add(scroller);
+		panel.add(Text1);
+		panel.add(check);
+			
 		//frame.getContentPane().add(BorderLayout.EAST, panel);
 		frame.setContentPane(panel);
-		
 		frame.setSize(500,500);
 		frame.setVisible(true);
 		
+		/**Second frame
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		
+		JFrame frame2 = new JFrame();
+		JPanel panel2 = new JPanel();
+		JButton Boton1 = new JButton("click!");
+		
+		panel2.setBackground(Color.white);
+		panel2.setLayout(new BorderLayout());
+		
+		JTextArea Textarea2 = new  JTextArea(10,20);
+		
+		JScrollPane scroller2 = new JScrollPane (Textarea2) ;
+		
+		scroller2.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scroller2.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		
+		panel2.add(BorderLayout.CENTER,scroller2);
+		panel2.add(BorderLayout.SOUTH,Boton1);
+		
+		frame2.setContentPane(panel2);
+		frame2.setSize(450,450);
+		frame2.setVisible(true);
+		
+		Boton1.addActionListener(this);
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 
