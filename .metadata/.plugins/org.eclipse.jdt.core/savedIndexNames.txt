@@ -1,0 +1,12 @@
+INDEX VERSION 1.126+D:\cferrabo\Mis documentos\Eclipse\Workspace\HeadFirstExamples\.metadata\.plugins\org.eclipse.jdt.core
+865023573.index
+731905987.index
+3403746368.index
+2530217983.index
+906114669.index
+2448070664.index
+156503153.index
+1192591792.index
+1830914986.index
+3702958045.index
+1569728724.index

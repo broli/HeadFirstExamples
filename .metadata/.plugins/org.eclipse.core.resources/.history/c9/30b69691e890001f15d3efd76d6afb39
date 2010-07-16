@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+
+/**
+ * @author cferrabo
+ *
+ */
+public class Button1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Buttonl gui = new Buttonl();
+		qui.go();
+
+	}
+
+}
