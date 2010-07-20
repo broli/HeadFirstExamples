@@ -1,0 +1,60 @@
+import java.awt.Color;
+
+import javax.swing.*;
+
+/**
+ * 
+ */
+
+/**
+ * @author cferrabo
+ *
+ */
+public class WidgetTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		WidgetTest gui = new WidgetTest();
+	    gui.go();
+	}
+
+
+	public void go() {
+		JFrame frame = new JFrame () ;
+		JPanel panel = new JPanel () ;
+		
+		panel.setBackground(Color.gray);
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		
+		JTextField Text1 = new JTextField("Texto");
+		Text1.setEditable(false);
+		Text1.setSize(10, 10);
+		
+		JTextArea Textarea = new  JTextArea(10,20);
+		
+		JScrollPane scroller = new JScrollPane (Textarea) ;
+		
+		scroller.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scroller.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		
+		
+		JCheckBox check = new JCheckBox("Goes to 11");
+		
+		
+		
+		panel.add(scroller);
+		panel.add(Text1);
+		panel.add(check);
+			
+		//frame.getContentPane().add(BorderLayout.EAST, panel);
+		frame.setContentPane(panel);
+		frame.setSize(500,500);
+		frame.setVisible(true);
+		
+		
+	}
+
+	
+}
