@@ -1,2 +1,0 @@
-INDEX VERSION 1.126+D:\cferrabo\Mis documentos\Eclipse\Workspace\HeadFirstExamples\.metadata\.plugins\org.eclipse.jdt.core
-3936640499.index
